@@ -8,7 +8,7 @@ _This expense tracker app was created with React, Bootstrap, and CSS3._
 See it here: https://web-dev-jr.github.io/expense-tracker/
 <br>
 <br>
-<image src="images/expense-tracker.PNG">
+<image src="/public/images/expense-tracker.PNG">
   
 ## Summary
 Expense Tracker built with React, Bootstrap, HTML and zero tutorials! This app allows the user to add expenses including the name of the expense, amount, payment type used, and date of the expense. Completed expenses can be removed by clicking the red trash can icon to the right of the expense item. 
