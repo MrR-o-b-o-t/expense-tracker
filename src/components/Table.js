@@ -6,12 +6,19 @@ class Table extends React.Component {
     const expenseData = expenses.map(expense => {
       const { type, name, date, amount } = expense;
       return (
-        <tr key={expense}>
-          <td>{type}</td>
-          <td>{name}</td>
-          <td>{date}</td>
-          <td>{amount}</td>
-        </tr>
+        <tr key={expense.name}>
+        <td>{type}</td>
+        <td>{name}</td>
+        <td>{date}</td>
+        <td>${amount}</td>
+        <td
+            className="fas fa-trash"
+            title="Delete"
+            // style={myStyles}
+            onClick={() => {this.props.deleteRow(Object.values(expense))}}
+            >
+        </td>
+    </tr>
       );
     });
     return (

@@ -9,6 +9,18 @@ class App extends React.Component {
     expenses: []
   };
 
+  deleteExpense = (item) => {
+    const expenseArray = this.state.expenses;
+    let index = expenseArray.findIndex( elem => {
+      if(elem.name === item[1]) {
+        return true;
+      }
+    })
+    expenseArray.splice(index, 1);
+    this.setState({ expenses: expenseArray })
+    //}
+}
+
   addExpense = expense => {
     this.setState({
       expenses: [...this.state.expenses, expense]
@@ -20,7 +32,7 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <Form addExpenses={this.addExpense} />
-        <Table expenses={this.state.expenses} />
+        <Table expenses={this.state.expenses} deleteRow={this.deleteExpense} />
       </div>
     );
   }
